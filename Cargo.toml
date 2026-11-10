@@ -1,0 +1,19 @@
+[package]
+name = "zg-metis-adapter"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.98"
+license = "Apache-2.0"
+repository = "https://github.com/tsoernes/zg-metis-adapter"
+description = "Loopback OpenAI-compatible bridge for GitHub Copilot Metis embeddings"
+publish = false
+
+[dependencies]
+axum = "0.8"
+reqwest = { version = "0.13.4", default-features = false, features = ["rustls", "json"] }
+serde = { version = "1.0.219", features = ["derive"] }
+serde_json = "1.0.143"
+tokio = { version = "1.47.1", features = ["macros", "net", "rt-multi-thread", "signal"] }
+
+[lints.rust]
+unsafe_code = "forbid"
